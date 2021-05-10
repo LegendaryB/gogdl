@@ -18,6 +18,13 @@
 # debug bin
 __debug_bin
 
+# .vscode
+/.vscode/
+
+# credentials
+credentials.json
+token.json
+
 ### Go Patch ###
 /vendor/
 /Godeps/
