@@ -13,11 +13,6 @@ release:
   name_template: "v{{.Version}}"
 changelog:
   skip: true
-archives:
-  - files:
-    - LICENSE.md
-    - README.md
-    - conf.json
 checksum:
   name_template: 'checksums.txt'
 snapshot:
