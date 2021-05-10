@@ -29,9 +29,11 @@ Same as above but the files will be placed in currentFolder/mycustomfolder.
 `sudo ./gogdl -folder driveFolderId -outdir mycustomfolder`
 
 ### Download multiple folders
-At the moment you can use the bash to archive that:
+At the moment you can use a bash script to archive that:
 
 ```
+#!/bin/bash
+
 cat id-list.txt | while read id 
 do
    ./gogdl -folder $id
