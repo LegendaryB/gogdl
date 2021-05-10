@@ -12,7 +12,7 @@ Simple CLI application to download all files in a folder from Google Drive. Team
 
 ## Requirements
 
-A Google Cloud Platform project with the Drive API enabled. = [Guide](https://developers.google.com/drive/api/v3/quickstart/go#step_1_turn_on_the)
+A Google Cloud Platform project with the Drive API enabled ([Guide](https://developers.google.com/drive/api/v3/quickstart/go#step_1_turn_on_the)).
 
 You need to place the downloaded .json file next to the application and name it 'credentials.json'.
 
