@@ -27,3 +27,13 @@ Just replace 'driveFolderId' with the Google Drive folder id you want to downloa
 Same as above but the files will be placed in currentFolder/mycustomfolder.
 
 `sudo ./gogdl -folder driveFolderId -outdir mycustomfolder`
+
+### Download multiple folders
+At the moment you can use the bash to archive that:
+
+```
+cat id-list.txt | while read id 
+do
+   ./gogdl -folder $id
+done
+```
