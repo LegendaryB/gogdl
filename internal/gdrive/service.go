@@ -1,4 +1,4 @@
-package main
+package gdrive
 
 import (
 	"context"
@@ -80,7 +80,7 @@ func saveToken(path string, token *oauth2.Token) {
 	json.NewEncoder(f).Encode(token)
 }
 
-func getService() (*drive.Service, error) {
+func New() (*drive.Service, error) {
 	b, err := ioutil.ReadFile("credentials.json")
 
 	if err != nil {
