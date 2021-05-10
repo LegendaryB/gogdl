@@ -1,0 +1,24 @@
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - windows
+      - linux
+    goarch:
+      - amd64
+      - arm
+      - arm64
+release:
+  name_template: "v{{.Version}}"
+changelog:
+  skip: true
+archives:
+  - files:
+    - LICENSE.md
+    - README.md
+    - conf.json
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}-next"
