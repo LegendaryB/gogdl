@@ -1,16 +1,19 @@
 package main
 
 import (
-	"flag"
-	"log"
 	"os"
 
-	"github.com/LegendaryB/gogdl/internal/download"
-	"github.com/LegendaryB/gogdl/internal/gdrive"
+	"github.com/LegendaryB/gogdl/cmd"
 )
 
 func main() {
-	folder := flag.String("folder", "", "Id of shared folder on Google Drive.")
+	cmd := cmd.Root()
+
+	if err := cmd.Execute(); err != nil {
+		os.Exit(1)
+	}
+
+	/*folder := flag.String("folder", "", "Id of shared folder on Google Drive.")
 	outdir := flag.String("outdir", "outdir", "Output directory for the downloads.")
 
 	flag.Parse()
@@ -21,5 +24,5 @@ func main() {
 		os.Exit(1)
 	}
 
-	log.Fatal(download.DriveFolder(service, *folder, *outdir))
+	log.Fatal(download.DriveFolder(service, *folder, *outdir)) */
 }
