@@ -19,6 +19,8 @@ func DriveFolder(service *drive.Service, folder string, outdir string) error {
 		return err
 	}
 
+	fmt.Printf("Drive folder: %s\n", driveFolder.Name)
+
 	directory := filepath.Join(outdir, driveFolder.Name)
 	err = os.MkdirAll(directory, os.ModePerm)
 
@@ -33,7 +35,7 @@ func DriveFolder(service *drive.Service, folder string, outdir string) error {
 			return err
 		}
 
-		fmt.Printf("Download finished: %s/%s\n", driveFolder.Name, file.Name)
+		fmt.Printf("\t%s -> done\n", file.Name)
 	}
 
 	return nil

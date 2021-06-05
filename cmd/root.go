@@ -1,14 +1,15 @@
 package cmd
 
-import (
-	"github.com/spf13/cobra"
-)
+import "github.com/spf13/cobra"
 
-func Root() *cobra.Command {
+func CreateRootCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "gogdl",
 		Short: "Download all files in a folder from Google Drive.",
 	}
+
+	cmd.AddCommand(createDownloadCommand())
+	cmd.AddCommand(createVerifyCommand())
 
 	return cmd
 }

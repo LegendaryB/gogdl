@@ -80,7 +80,7 @@ func saveToken(path string, token *oauth2.Token) {
 	json.NewEncoder(f).Encode(token)
 }
 
-func New() (*drive.Service, error) {
+func NewService() (*drive.Service, error) {
 	b, err := ioutil.ReadFile("credentials.json")
 
 	if err != nil {
